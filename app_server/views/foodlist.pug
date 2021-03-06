@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Here is a list of my favourite foods - #{title}
+    ul
+      each food in foods
+        .col-xs-12.list-group-item
+        h4
+          li
+            a(href=`/foods/${food._id}`)=food.name
